@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Recorte — Politeia UdeSA</title>
+<meta name="description" content="Recorte: de un video largo a clips para redes. Herramienta del equipo de comunicación de Politeia UdeSA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --navy:#0d2e89; --navy-deep:#0a2268; --ink:#17213a; --ink-2:#3f4a66; --muted:#6b7489; --mist:#f3f6fb; --celeste:#6ec1e4; --line:rgba(13,46,137,.12); }
+  * { box-sizing:border-box }
+  body { margin:0; font-family:Inter,system-ui,sans-serif; color:var(--ink); background:var(--mist); line-height:1.5; -webkit-font-smoothing:antialiased }
+  .wrap { max-width:880px; margin:0 auto; padding:56px 24px 80px }
+  header { display:flex; align-items:center; gap:12px; margin-bottom:56px }
+  header .name { font-weight:700; font-size:18px; color:var(--navy); letter-spacing:-.02em }
+  header .org { margin-left:auto; font-size:12px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--muted) }
+  h1 { font-family:Anton,Impact,sans-serif; font-weight:400; font-size:clamp(44px,8vw,84px); line-height:.98; letter-spacing:.01em; text-transform:uppercase; margin:0 0 18px; color:var(--ink) }
+  .lead { font-size:20px; color:var(--ink-2); max-width:640px; margin:0 0 36px }
+  .buttons { display:flex; gap:12px; flex-wrap:wrap; margin-bottom:12px }
+  .btn { display:inline-flex; align-items:center; gap:10px; height:56px; padding:0 24px; border-radius:14px; font-weight:600; font-size:17px; text-decoration:none; border:1.5px solid var(--line); background:#fff; color:var(--ink); transition:transform .1s, box-shadow .15s }
+  .btn:hover { transform:translateY(-1px); box-shadow:0 10px 28px -14px rgba(13,46,137,.35) }
+  .btn.primary { background:var(--navy); color:#fff; border-color:transparent }
+  .btn.primary:hover { background:var(--navy-deep) }
+  .btn svg { width:20px; height:20px }
+  .fine { font-size:13px; color:var(--muted); margin:0 0 64px }
+  h2 { font-family:Anton,Impact,sans-serif; font-weight:400; font-size:26px; letter-spacing:.02em; text-transform:uppercase; margin:0 0 14px }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px; margin-bottom:56px }
+  .card { background:#fff; border:1px solid var(--line); border-radius:18px; padding:22px 24px }
+  .card h3 { margin:0 0 8px; font-size:15px; font-weight:700 }
+  .card p, .card li { margin:0; color:var(--ink-2); font-size:15px }
+  .card ol { margin:0; padding-left:20px } .card li { margin:6px 0 }
+  .steps { counter-reset:s; display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:16px; margin-bottom:56px }
+  .step { background:#fff; border:1px solid var(--line); border-radius:18px; padding:22px 22px 20px; position:relative }
+  .step::before { counter-increment:s; content:counter(s,decimal-leading-zero); font-family:Anton,Impact,sans-serif; font-size:28px; color:var(--celeste); display:block; margin-bottom:8px }
+  .step b { display:block; margin-bottom:4px } .step p { margin:0; color:var(--ink-2); font-size:14.5px }
+  kbd { font-family:ui-monospace,Menlo,monospace; font-size:12px; padding:1px 6px; border:1px solid var(--line); border-radius:5px; background:var(--mist) }
+  footer { color:var(--muted); font-size:13px; border-top:1px solid var(--line); padding-top:20px }
+  @media (prefers-color-scheme:dark) {
+    :root { --mist:#0f1526; --ink:#eef1f8; --ink-2:#b9c1d6; --muted:#7f8aa8; --line:rgba(110,193,228,.16) }
+    .card, .step, .btn { background:#171e33 } .btn { color:var(--ink) } header .name { color:var(--ink) } kbd { background:#1d2540 }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <svg width="26" height="26" viewBox="0 0 100 100" aria-hidden="true"><defs><clipPath id="pmark"><ellipse cx="50.0" cy="44.0" rx="45.0" ry="40.0"/><polygon points="22.1,66.0 17.6,100.0 52.2,82.0"/></clipPath></defs>
+<g clip-path="url(#pmark)"><g transform="rotate(-18 50.0 44.0)"><rect x="-50.0" y="-156.0" width="200.0" height="160.0" fill="#254089"/><rect x="-50.0" y="89.6" width="200.0" height="200.0" fill="#a3237d"/><rect x="-50.0" y="4.0" width="200.0" height="10.7" fill="#254089" stroke="#fff" stroke-width="0.90"/><rect x="-50.0" y="14.7" width="200.0" height="10.7" fill="#0061ab" stroke="#fff" stroke-width="0.90"/><rect x="-50.0" y="25.4" width="200.0" height="10.7" fill="#039aab" stroke="#fff" stroke-width="0.90"/><rect x="-50.0" y="36.1" width="200.0" height="10.7" fill="#1b9548" stroke="#fff" stroke-width="0.90"/><rect x="-50.0" y="46.8" width="200.0" height="10.7" fill="#70bd43" stroke="#fff" stroke-width="0.90"/><rect x="-50.0" y="57.5" width="200.0" height="10.7" fill="#f3921d" stroke="#fff" stroke-width="0.90"/><rect x="-50.0" y="68.2" width="200.0" height="10.7" fill="#ed3c2d" stroke="#fff" stroke-width="0.90"/><rect x="-50.0" y="78.9" width="200.0" height="10.7" fill="#a3237d" stroke="#fff" stroke-width="0.90"/></g></g></svg>
+    <span class="name">Recorte</span>
+    <span class="org">Politeia · Comunicación</span>
+  </header>
+
+  <h1>De una charla<br>a los clips.</h1>
+  <p class="lead">Arrastrás el video de una charla, un panel o una entrevista. Recorte lo transcribe en tu computadora, encuentra los mejores momentos y exporta los clips listos para editar.</p>
+
+  <div class="buttons" id="buttons">
+    <a class="btn" id="mac" href="https://github.com/fvoltess/recorte-descargas/releases/latest/download/Recorte-Mac.dmg">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.365 1.43c0 1.14-.493 2.27-1.177 3.08-.744.9-1.99 1.57-2.987 1.57-.12 0-.23-.02-.3-.03-.01-.06-.04-.22-.04-.39 0-1.15.572-2.27 1.206-2.98.804-.94 2.142-1.64 3.248-1.68.03.13.05.28.05.43zm4.565 15.71c-.03.07-.463 1.58-1.518 3.12-.945 1.34-1.94 2.71-3.43 2.71-1.517 0-1.9-.88-3.63-.88-1.698 0-2.302.91-3.67.91-1.377 0-2.332-1.26-3.428-2.8-1.287-1.82-2.323-4.63-2.323-7.28 0-4.28 2.797-6.55 5.552-6.55 1.448 0 2.675.95 3.6.95.865 0 2.222-1.01 3.902-1.01.613 0 2.886.06 4.374 2.19-.13.09-2.383 1.37-2.383 4.19 0 3.26 2.854 4.42 2.955 4.45z"/></svg>
+      Descargar para Mac
+    </a>
+    <a class="btn" id="win" href="https://github.com/fvoltess/recorte-descargas/releases/latest/download/Recorte-Windows.exe">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 5.5l7.5-1v7H3zm8.5-1.2L21 3v8.5h-9.5zM3 12.5h7.5v7L3 18.5zm8.5 0H21V21l-9.5-1.3z"/></svg>
+      Descargar para Windows
+    </a>
+  </div>
+  <p class="fine">Gratis, sin cuenta. Mac con chip Apple (M1 o más nuevo) y Windows 11. La primera vez baja el modelo de voz (550 MB) y después no necesita internet salvo para el paso con ChatGPT, Claude o Gemini.</p>
+
+  <h2>La primera vez</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Mac</h3>
+      <ol>
+        <li>Abrí el <b>.dmg</b> y arrastrá Recorte a Aplicaciones.</li>
+        <li>Al abrirlo, macOS dice que no puede verificarlo. Cerrá ese aviso.</li>
+        <li>Andá a <b>Ajustes del Sistema → Privacidad y seguridad</b>, bajá hasta el final y tocá <b>Abrir de todos modos</b>.</li>
+      </ol>
+      <p style="margin-top:10px">Una sola vez. Después abre como cualquier app.</p>
+    </div>
+    <div class="card">
+      <h3>Windows</h3>
+      <ol>
+        <li>Abrí el instalador.</li>
+        <li>Si aparece «Windows protegió tu PC», tocá <b>Más información</b> y después <b>Ejecutar de todas formas</b>.</li>
+        <li>Siguiente, siguiente, listo.</li>
+      </ol>
+      <p style="margin-top:10px">Una sola vez. Es porque la app no tiene firma paga, no porque tenga algo raro.</p>
+    </div>
+  </div>
+
+  <h2>Cómo se usa</h2>
+  <div class="steps">
+    <div class="step"><b>Arrastrá el video</b><p>Ponele un título. Ese va a ser el nombre de la carpeta con los clips.</p></div>
+    <div class="step"><b>Esperá la transcripción</b><p>En una compu rápida, una charla de dos horas tarda unos 10 minutos. Podés minimizar la ventana.</p></div>
+    <div class="step"><b>Buscá los momentos</b><p>Elegí ChatGPT, Claude o Gemini. Pegá (<kbd>⌘V</kbd> / <kbd>Ctrl+V</kbd>), copiá la respuesta y volvé. Los momentos aparecen solos.</p></div>
+    <div class="step"><b>Mirá, recortá, exportá</b><p>Cada momento tiene su video. Ajustá el inicio y el fin, elegí los que sirven y exportá a la carpeta que quieras.</p></div>
+  </div>
+
+  <footer>Recorte es una herramienta interna del equipo de comunicación de Politeia UdeSA. Todo corre en tu computadora; ningún video se sube a ningún lado.</footer>
+</div>
+<script>
+  // Poner primero el botón de la plataforma del visitante.
+  (function () {
+    var ua = navigator.userAgent, mac = /Macintosh|Mac OS X/.test(ua), win = /Windows/.test(ua);
+    var b = document.getElementById('buttons'), m = document.getElementById('mac'), w = document.getElementById('win');
+    if (win) { w.classList.add('primary'); b.insertBefore(w, m); } else if (mac) { m.classList.add('primary'); }
+  })();
+</script>
+</body>
+</html>
